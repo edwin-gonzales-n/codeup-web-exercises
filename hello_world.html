@@ -61,7 +61,7 @@
         <!-- don't forget thit is a comment
         and this comment is going inside the body of the page -->
         <h1>Hi Everybody!</h1>
-        <h2>Welcome to Codeup</h2>
+        <h2>Welcome to <a href="https://codeup.com" target="_blank"><strong>Codeup</strong></a></h2>
         <h3>This is an h3</h3>
         <h4>This is an h4</h4>
 
@@ -109,7 +109,26 @@
         </div>
         </a>
 
-        <br><br><br><br>
+        <br><br><br><br>  <!-- <-- this is bad practice.  Do not use multiple breaks, use CSS to style!  -->
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Breed</th>
+            </tr>
+            <tr>
+                <td>something</td>
+                <td>something</td>
+                <td>something</td>
+            </tr>
+            <tr>
+                <td>something</td>
+                <td>something</td>
+                <td>something</td>
+            </tr>
+
+        </table>
 
         <script>
             "use strict";
@@ -118,5 +137,7 @@
 
             //console.log("what is up!");
         </script>
+
+        <a href="#top">top</a>
 </body>
 </html>
