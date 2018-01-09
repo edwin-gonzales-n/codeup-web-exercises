@@ -1,34 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Style tags and meta tags go in the head of the documment -->
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <head>
+        <!-- Style tags and meta tags go in the head of the documment -->
+        <meta charset="UTF-8">
+        <title>Hello World!</title>
 
-    <style></style>
-    <!-- external CSS Style sheets -->
-</head>
-<body>
-    <!-- don't forget thit is a comment
-    and this comment is going inside the body of the page -->
-    <h1>Hi Everybody!</h1>
-    <h2>Welcome to Codeup</h2>
-    <h3>This is an h3</h3>
-    <h4>This is an h4</h4>
+        <style>
+            h1  {
+                color: blue;
+            }
+            h2 {
+                color: brown;
+            }
+            h3 {
+                color: olivedrab;
+            }
+            /* selector for all elements with class="container" */
+            .container {
+                position: relative;
+                width: 44%;
+            }
+            /* selector for all elements with class="image" */
+            .image {
+                opacity: 1;
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+            /* selector for all elements with class="middle" */
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%)
+            }
+            /* selector for all elements with class="container", element hover, and class image */
+            .container:hover .image {
+                opacity: 0.3;
+            }
+            /* selector for all elements with class="container", element hover, and class middle */
+            .container:hover .middle {
+                opacity: 1;
+            }
 
-    <h1>How to add/commit your work to GitHub</h1>
-    <ul>
-        <li>Create a new file or edit an existing file</li>
-        <li>Any time you add new work, make a commit</li>
-        <li>In IntelliJ, make a commit with Command+K</li>
-        <li>Add a "Commit Message" that explains what you are doing</li>
-        <li>Hover over the "commit" button and select "commit and push"</li>
-        <li>And do it everytime you update something.</li>
-        <li>Practice improve performance</li>
-    </ul>
+            .text {
+                background-color: white;
+                color: black;
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        </style>
+        <!-- external CSS Style sheets -->
+    </head>
+    <body>
+        <!-- don't forget thit is a comment
+        and this comment is going inside the body of the page -->
+        <h1>Hi Everybody!</h1>
+        <h2>Welcome to Codeup</h2>
+        <h3>This is an h3</h3>
+        <h4>This is an h4</h4>
 
-    <script>
-        console.log("what is up!")
-    </script>
+        <h1>How to add/commit your work to GitHub</h1>
+        <ul>
+            <li>Create a new file or edit an existing file</li>
+            <li>Any time you add new work, make a commit</li>
+            <li>In IntelliJ, make a commit with Command+K</li>
+            <li>Add a "Commit Message" that explains what you are doing</li>
+            <li>Hover over the "commit" button and select "commit and push"</li>
+            <li>And do it everytime you update something.</li>
+            <li>Practice improve performance</li>
+            <li>Now I am doing a word with an anchor tab ->>  go to <a href="http://codeup.com">codeup</a> </li>
+        </ul>
+
+        <div>div elements are BLOCK elements</div>
+        <br>
+        <a href="#">Anchor tags are "INLINE" elements</a>
+
+        <br><br>
+
+        <form action="">
+            <input type="text" placeholder="input your email">
+            <input type="password" placeholder="input your password">
+            <button type="submit">Login</button>
+        </form>
+
+        <h2>This is an image:</h2>
+        <h4>Please click on the image to go to it's website</h4>
+
+        <a href="https://codeup.com" target="_blank">
+            <img src="img/codeuplogo.png" alt="codeup image">
+        </a>
+        <!-- IMAGE HOVER EFFECT USING SELECTORS-->
+        <h2>This is an image with a hover effect.</h2>
+        <h3>We use CSS selectors to create a hover effect on the image</h3>
+        <h4>Please click on the image to go to it's website</h4>
+
+        <a href="https://codeup.com" target="_blank">
+        <div class="container">
+            <img src="img/codeuplogo.png" alt="Codeup image" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">go to codeup</div>
+            </div>
+        </div>
+        </a>
+
+        <br><br><br><br>
+
+        <script>
+            "use strict";
+            //var response = alert('Hello!');
+            //alert("I hope you like my page!");
+
+            //console.log("what is up!");
+        </script>
 </body>
 </html>
