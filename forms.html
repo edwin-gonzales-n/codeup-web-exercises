@@ -7,19 +7,61 @@
 <body>
     <h1>Register with Us</h1>
 
-    <form action="https://hookb.in/KlwO8q05" method="GET">
-        <!-- action attribute on a form is WHERE you are sending the form (url or a specific file)
-             method is the "type" of request.  We have GET and POST
-             GET method is used for downloading information, we use GET in search forms
-             POST method is used for uploading information, we use POST on login forms
-        -->
-        <label for="username">Username</label>
-        <input type="text" name="username" placeholder="Input your username here" id="username">
+    <form method="POST" action="https://hookb.in/Z1dxa11Y">
 
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Input your password here">
+        <div>
+            <label for="email">Email address</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email address">
+        </div>
 
-        <button type="submit">Login</button>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+        </div>
+        <br>
+
+        <div>
+            <label for="comment">Bio</label>
+            <br>
+            <textarea name="comment" id="comment" placeholder="Please give us a short description of yourself"></textarea>
+        </div>
+
+        <br>
+
+        <!--Create a "How did you hear about us" section that contains radio buttons.
+        The values should be "billboard", "radio advertisement", "internet advertisement", and "other".
+        Only one of the values should be allowed to be selected at a time.
+
+        What happens if the inputs are given different name attributes?
+        Change these inputs so that multiple answers are allowed to be selected.-->
+
+        <fieldset>
+            <legend>How did you hear about us?</legend>
+            Billboard <input type="radio" name="how did you hear about us:" value="billboad">
+            Radio Advertisement <input type="radio" name="how did you hear about us:" value="radio advertisement">
+            Internet Advertisement <input type="radio" name="how did you hear about us:" value="internet advertisement">
+            Other <input type="radio" name="how did you hear about us:" value="other">
+        </fieldset>
+
+        <br>
+
+        <!--Create a dropdown that asks the user what web browser they are using.-->
+
+
+        <legend>What browser are you using?</legend>
+        <select name="What web browser are you using?">
+            <option value="mozilla">Firefox</option>
+            <option value="chrome">Chrome</option>
+            <option value="explorer">IE</option>
+        </select>
+
+        <br>
+
+        <p>
+            <button type="submit">Submit the form</button>
+            <br>
+        </p>
+
     </form>
 </body>
 
