@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ordering a pizza form</title>
+</head>
+<body>
+    <h1>Welcome to Gonzo's Pizza joint</h1>
+    <h3>Where flying pizzas have wings</h3>
+    <hr>
+
+    <h3>Please fill out the ordering form:</h3>
+
+
+        <form method="post" action="https://hookb.in/Z1dxa11Y">
+
+            <div>
+                <label for="email">Email address</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email address">
+            </div>
+                <br>
+
+            <div>
+                <label for="phonenumber">Phone Number</label>
+                <input type="text" id="phonenumber" name="phonenumber" placeholder="Enter your phone number">
+            </div>
+                <br>
+
+            <div>
+                <label for="address">Address</label>
+                <br>
+                <textarea name="address" id="address" placeholder="Enter your delivery address"></textarea>
+            </div>
+                <br>
+
+            <fieldset>
+                <legend>Build your pizza</legend>
+
+                <div>
+                    Pepperonni<input type="radio" name="pick your pizza:" value="pepperonni">
+                    Hawaian <input type="radio" name="pick your pizza:" value="hawaian">
+                    Veggie and Ham <input type="radio" name="pick your pizza:" value="veggie and ham">
+                    Cheese <input type="radio" name="pick your pizza:" value="cheese">
+                </div>
+                    <br>
+
+                <div>
+                    <legend>pick your crust</legend>
+                    <select name="crust:">
+                        <option value="fat dough">Fat Dough</option>
+                        <option value="flat wheat">Flat Wheat</option>
+                        <option value="glutten free">Glutten Free</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <legend>pick your cheese combination</legend>
+                    <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+                    <select name="cheese:" multiple>
+                        <option value="gouda">Gouda</option>
+                        <option value="mozarella">Mozarella</option>
+                        <option value="fetta">Fetta</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <legend>pick your extra ingredients</legend>
+                    <select name="pick your extra ingredients:">
+                        <option value="red peppers">Red Peppers</option>
+                        <option value="spinach">Spinach</option>
+                        <option value="mushrooms">Mushrooms</option>
+                    </select>
+                </div>
+                <br>
+            </fieldset>
+
+        <p>
+            <button type="submit">Submit the form</button>
+            <br>
+        </p>
+
+        </form>
+
+</body>
+</html>
