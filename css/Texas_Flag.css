@@ -1,0 +1,113 @@
+body {
+    background-color: white;
+    zoom: 1;
+}
+
+article {
+    text-align: center;
+}
+
+div.flag {
+    position: relative;
+    width: 600px;
+    margin: 3% auto;
+    height: 400px;
+
+}
+
+div.texture {
+    position: absolute;
+    height: 400px;
+    width: 600px;
+    z-index: 2;
+    opacity: .1;
+    background:
+            linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+            linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+            linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+            linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+            linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+            linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+div.blue, div.stripes {
+    float: left;
+}
+
+.white, .red {
+    width: 400px;
+    height: 200px;
+    background-color: white;
+
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    width: 33%;
+    height: 400px;
+    background-color: blue;
+}
+
+.starContainer {
+    width: 200px;
+    height: 200px;
+    margin: 85% 12%;
+
+    -moz-transform: scale(0.75) translate(-20px);
+}
+
+.star {
+    zoom: .75;
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: white;
+    width: 0px;
+    height: 0px;
+    border-right:  100px solid transparent;
+    border-bottom: 70px  solid white;
+    border-left:   100px solid transparent;
+    -moz-transform:    rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform:     rotate(35deg);
+    -o-transform:      rotate(35deg);
+}
+.star:before {
+    border-bottom: 80px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform:    rotate(-35deg);
+    -ms-transform:     rotate(-35deg);
+    -o-transform:      rotate(-35deg);
+
+}
+.star:after {
+    position: absolute;
+    display: block;
+    color: white;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform:    rotate(-70deg);
+    -ms-transform:     rotate(-70deg);
+    -o-transform:      rotate(-70deg);
+    content: '';
+}
