@@ -1,0 +1,71 @@
+.redbox {
+
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: red;
+    padding: 10px;
+    margin: 10px 10px 10px 0px;
+}
+
+.orangebox {
+
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: orange;
+    padding: 10px;
+    margin: 10px 10px 10px 5%;
+}
+
+.yellowbox {
+
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: yellow;
+    padding: 10px;
+    margin: 10px 10px 10px 10%;
+}
+
+.greenbox {
+
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: green;
+    padding: 10px;
+    margin: 10px 10px 10px 15%;
+}
+
+.bluebox {
+
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: blue;
+    padding: 10px;
+    margin: 10px 10px 10px 20%;
+}
+
+.pinkbox {
+
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: pink;
+    padding: 10px;
+    margin: 10px 10px 10px 25%;
+}
+
+h1  {
+    color: purple;
+
+}
+p {
+    text-align: left;
+    color: white;
+    margin: 1px;
+    font-weight: bold;
+
+}
