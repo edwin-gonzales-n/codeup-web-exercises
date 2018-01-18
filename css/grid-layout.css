@@ -21,7 +21,7 @@ body {
 
 .half-column {
     padding: 10px;
-    margin: 0;
+    margin: auto;
     text-align: center;
 
 }
@@ -50,11 +50,11 @@ body {
 .one-half {
     box-sizing: border-box;
     width: 100%;
-    height: 40px;
+    height: auto;
     /*border: 1px solid black;*/
     /*display: table;*/
     /*float: left;*/
-    margin: 0;
+    margin: auto;
 }
 
 .one-third {
@@ -104,6 +104,7 @@ body {
         float: left;
         margin: 0;
         padding: 1px;
+        padding-bottom: 8em;
     }
 
     .one-third {
@@ -121,8 +122,8 @@ body {
         width: 25%;
         height: 50px;
         /*border: 1px solid black;*/
-        /*display: table;*/
-        float: left;
+        /*display: block;*/
+        /*float: bottom;*/
         margin: 0;
         padding: 1px;
     }
