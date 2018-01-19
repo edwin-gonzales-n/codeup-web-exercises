@@ -107,3 +107,7 @@ body > main > div.jumbotron.hidden-xs {
 /*body > main > div.container > div:nth-child(3) > div.panel-footer {*/
     /*padding: 2em;*/
 /*}*/
+
+.navbar-default{
+    background-color: #ffffff;
+}
