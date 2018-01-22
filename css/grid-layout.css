@@ -1,0 +1,148 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    padding: 15px;
+
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: 1000px;
+    max-width: 1200px;
+    /*background-color: #0099cc;*/
+}
+
+.half-column {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+
+}
+
+.three-columns {
+    padding: 10px;
+    margin: 0;
+}
+
+.quarter-column {
+    padding: 10px;
+    margin: 0;
+}
+
+.eight-column {
+    padding: 10px;
+    margin: 0;
+}
+
+.mixed-column {
+    padding: 10px;
+    margin: 0;
+}
+
+
+.one-half {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    /*border: 1px solid black;*/
+    /*display: table;*/
+    /*float: left;*/
+    margin: auto;
+}
+
+.one-third {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    /*border: 1px solid black;*/
+    /*display: table;*/
+    /*float: left;*/
+    margin: 0;
+}
+
+.one-fourth {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    /*border: 1px solid black;*/
+    /*display: table;*/
+    /*float: left;*/
+    margin: 0;
+}
+
+.one-eight {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    /*border: 1px solid black;*/
+    /*display: table;*/
+    /*float: left;*/
+    margin: 0;
+}
+
+/*+++++++++++++++++++++++ DESKTOP LAYOUT STARTS++++++++++++++++++++++*/
+
+@media screen and (min-width: 768px) {
+
+    body {
+        padding: 1em;
+    }
+
+    .one-half {
+        box-sizing: border-box;
+        width: 50%;
+        height: 50px;
+        /*border: 1px solid black;*/
+        /*display: table;*/
+        float: left;
+        margin: 0;
+        padding: 1px;
+        padding-bottom: 8em;
+    }
+
+    .one-third {
+        box-sizing: border-box;
+        width: 33.3333333333%;
+        height: 50px;
+        /*border: 1px solid black;*/
+        /*display: table;*/
+        float: left;
+        margin: 0;
+        padding: 1px;
+    }
+    .one-fourth {
+        box-sizing: border-box;
+        width: 25%;
+        height: 50px;
+        /*border: 1px solid black;*/
+        /*display: block;*/
+        /*float: bottom;*/
+        margin: 0;
+        padding: 1px;
+    }
+    .one-eight {
+        box-sizing: border-box;
+        width: 12.5%;
+        height: 50px;
+        /*border: 1px solid black;*/
+        /*display: table;*/
+        float: left;
+        margin-left: 0;
+        padding: 1px;
+    }
+
+
+}
+
+
+/*.move-right {*/
+    /*float: right;*/
+    /*margin: 0;*/
+/*}*/

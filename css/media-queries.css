@@ -1,0 +1,313 @@
+/*body{*/
+    /*background-color: white;*/
+    /*margin 0;*/
+    /*width: auto;*/
+    /*-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;*/
+    /*width: 80%;*/
+    /*max-width: 1000px;*/
+    /*margin: 0;*/
+    /*min-height: 100vh;*/
+    /*background-color: azure;*/
+    /*padding: 10px;*/
+/*}*/
+
+/*div {*/
+    /*clear: both;*/
+    /*margin-right: 10px;*/
+/*}*/
+
+/*h1, h2, h3, h4, h5, h6 {*/
+    /*text-align: center;*/
+    /*font-size: 40px;*/
+    /*padding: 16px;*/
+/*}*/
+
+/*div {*/
+    /*float: left;*/
+    /*!*background-color: azure;*!*/
+/*}*/
+
+/*.header-img {*/
+    /*float: top;*/
+    /*position: relative;*/
+    /*!*height: 339px;*!*/
+    /*!*width: 224px;*!*/
+/*}*/
+
+/*p {*/
+    /*padding: 16px;*/
+/*}*/
+
+/*img {*/
+    /*height: 224px;*/
+    /*width: 339px;*/
+/*}*/
+
+
+/*.alert-info {*/
+    /*border: 1px solid black;*/
+    /*color: black;*/
+    /*!*position: center;*!*/
+    /*top: 10px;*/
+    /*right: 20px;*/
+
+/*}*/
+
+/*.hidden-on-desktop {*/
+    /*color: #4EA6EA;*/
+    /*border: 1px solid black;*/
+    /*!*position: relative;*!*/
+    /*!*background-color: aqua;*!*/
+    /*!*padding: 20px;*!*/
+    /*margin: 0 2px 0 6px;*/
+    /*width: 500px;*/
+    /*height: 80px;*/
+    /*text-align: center;*/
+    /*font-size: 50px;*/
+    /*!*float: top;*!*/
+/*}*/
+
+/*li {*/
+    /*color: #4EA6EA;*/
+    /*border: 1px solid black;*/
+    /*background-color: gray;*/
+    /*padding: 10px;*/
+    /*margin: 0 2px 6px 6px;*/
+    /*width: 500px;*/
+    /*height: 80px;*/
+    /*text-align: center;*/
+    /*font-size: xx-large;*/
+    /*list-style: none;*/
+/*}*/
+
+/*!*nav {*!*/
+    /*!*margin: 0 2px 0 6px;*!*/
+/*!*}*!*/
+
+/*.nav-links {*/
+    /*position: relative;*/
+    /*float: left;*/
+/*}*/
+
+/*!* screen sizes between 960px and 1200px *!*/
+/*!*@media screen and (min-width:960px) and (max-width:1200px) {*!*/
+    /*!*h1  {*!*/
+        /*!*border-color: #4EA6EA;*!*/
+    /*!*}*!*/
+
+    /*!* ... *!*/
+/*}*/
+
+* {
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    body {
+        background-color: whitesmoke;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .hidden-on-desktop {
+        background-color: aqua;
+        padding: 8px;
+        margin-bottom: 7px;
+        color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        /*padding: 15px;*/
+        text-align: center;
+        font-size: 14px;
+    }
+    .alert-info {
+        border: 2px solid black;
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+
+    .alert-info { display: block; }  /* show it on small screens */
+
+    /*.nav-links ul {*/
+        /*list-style-type: none;*/
+        /*padding: 8px;*/
+        /*margin-bottom: 7px;*/
+        /*!*padding: 15px;*!*/
+    /*}*/
+
+    .nav-links li {
+        padding: 10px;
+        margin: 0 30px 7px 0;
+        background-color: gray;
+        color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        text-align: center;
+        font-size: 14px;
+        list-style: none;
+
+    }
+
+    .nav-links li:hover {
+        background-color: #0099cc;
+    }
+
+    img {
+    height: 224px;
+    width: 100%;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 4000px) {
+    .hidden-on-desktop { display: none; }   /* hide it elsewhere */
+}
+
+@media screen and (min-width: 401px) and (max-width: 4000px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    /*body {*/
+        /*width: 568px;*/
+        /*height: 736px;*/
+    /*}*/
+
+    h1 {
+        background-color: violet;
+        color: black;
+        padding: 15px;
+        float: left;
+    }
+    ul {
+        list-style-type: revert;
+        float: right;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: transparent;
+    }
+
+    li {
+        float: left;
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: transparent;
+    }
+
+    .nav-links li {
+        list-style-position: unset;
+        /*display: inline;*/
+        display: inline;
+        color: black;
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+        text-decoration: none;
+        background-color: whitesmoke;
+        box-shadow: transparent;
+    }
+
+    li a:hover {
+        background-color: transparent;
+        box-shadow: transparent;
+    }
+
+    .header-img img {
+        height: 385px;
+        width: 100%;
+        position: center;
+    }
+
+    /*section {*/
+        /*display: block;*/
+    /*}*/
+
+    .main {
+        width: 40%;
+        height: 50%;
+        position: relative;
+        float: left;
+        /*border: 1px solid black;*/
+    }
+
+    .main section {
+        float: left;
+    }
+
+    .sub-section {
+        /*width: 40%;*/
+        /*height: 10%;*/
+        /*margin: auto;*/
+        /*position: relative;*/
+        width: 50%;
+        float: right;
+        position: center;
+        /*display: unset;*/
+    }
+
+    .sub-section section {
+        float: right;
+    }
+
+    /*.sub-section p {*/
+        /*float: right;*/
+    /*}*/
+
+    footer {
+        background-color: transparent;
+        position: absolute;
+        color: black;
+        float: left;
+        text-align: center;
+        font-size: 12px;
+        margin: 5% 0 0 0;
+        padding: 5% 0 0 0;
+    }
+
+    #social-media-links {
+        width: 256px;
+        height: 256px;
+        background: url('../img/facebook.png'), url("../img/Twitter.png"), url("../img/instagram-logo-color-256.png") no-repeat, repeat, right, center, left;
+        padding: 10px;
+        display: block;
+
+    }
+
+}
+
+h1 {
+    background-color: transparent;
+    color: black;
+    padding: 15px;
+    text-align: center;
+}
+
+nav::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*[class*="nav-links"] {*/
+    /*float: none;*/
+    /*padding: 15px;*/
+/*}*/
+
+/*footer {*/
+    /*background-color: #0099cc;*/
+    /*color: #ffffff;*/
+    /*text-align: center;*/
+    /*font-size: 12px;*/
+    /*padding: 15px;*/
+/*}*/
+
+
+

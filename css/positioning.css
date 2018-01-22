@@ -23,6 +23,15 @@ main {
 
 }
 
+img {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    /*float: right;*/
+    width: 50px;
+    height: 50px;
+}
+
 .orangebox {
 
     height: 50px;

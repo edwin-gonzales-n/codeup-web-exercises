@@ -1,0 +1,113 @@
+.thumbnail>img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    /*float: inside;*/
+}
+
+.jumbotron h1 {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flow;
+    background-color: whitesmoke;
+    opacity: .8;
+    width: 100%;
+}
+
+
+.thumbnail {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+}
+
+.caption {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+}
+
+.caption p {
+    font-size: 1000px;
+    margin: 0;
+    /*font-weight: initial;*/
+}
+
+.container {
+    max-width: 100%;
+    margin: 0;
+}
+
+/*.nav .navbar .navbar-default {*/
+    /*margin: 0px;*/
+/*}*/
+
+.panel-heading div {
+    background-color: #0099cc;
+}
+
+.container-fluid {
+    max-width: 80%;
+    padding: 0;
+}
+
+.container-fluid img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav button {
+    margin-right: 1em;
+    background-color: #0099cc;
+}
+
+body > main > div.container > div:nth-child(5) > div.panel-body > div:nth-child(2) > div:nth-child(2) {
+    margin-top: 0;
+}
+
+body > main > div.container > div:nth-child(5) > div.panel-body > div:nth-child(1) > div:nth-child(2) {
+    margin-top: 0;
+}
+
+body > main > nav {
+    margin-bottom: 0;
+}
+
+#box-search > div {
+    margin-bottom: 0;
+}
+
+/* DIRECT FIXES FROM "INSPECT" IN ORDER TO FIX PADDING ISSUES*/
+
+body > main > div.jumbotron.hidden-xs {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+/* DIRECT FIXES FROM "INSPECT" PAGE IN ORDER TO FIX PADDING ISSUES*/
+
+#box-search > div > div {
+    padding: 0;
+}
+
+#box-search > div {
+    padding: 0;
+}
+
+/*body > main > div.container > div:nth-child(3) > div.panel-footer > button {*/
+    /*float: right;*/
+    /*display: inline;*/
+/*}*/
+
+/*body > main > div.container > div:nth-child(3) > div.panel-footer {*/
+    /*padding: 2em;*/
+/*}*/
+
+.navbar-default{
+    background-color: #ffffff;
+}
