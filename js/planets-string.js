@@ -31,16 +31,30 @@
     console.log(planetsString);
 
     console.log('');
+    //
+    // for (var i=0;i<planetsArray.length;i++) {
+    //     planetsArray[i] = planetsArray[i]+"</li>";
+    // }
+    //
+    // planetsArray.unshift("<ul>");
+    // planetsArray.push("</ul>");
+    //
+    // var planetsStringNew = planetsArray.join("<li>");
+    // console.log(planetsStringNew);
+    // document.write(planetsStringNew);
 
-    for (var i=0;i<planetsArray.length;i++) {
-        planetsArray[i]=planetsArray[i]+"</li>";
-    }
+    // With looping
+    var planetsHTML = "<ul>";
 
-    planetsArray.unshift("<ul>");
-    planetsArray.push("</ul>");
+    planetsArray.forEach(function(planet) {
+        planetsHTML += "<li>" + planet + "</li>";
+    });
 
-    var planetsStringNew = planetsArray.join("<li>");
-    console.log(planetsStringNew);
+    planetsHTML += "</ul>";
+
+    console.log(planetsHTML);
+
+    document.write(planetsHTML);
 
 })();
 
