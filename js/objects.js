@@ -177,34 +177,34 @@
      *   `showBookInfo` function.
      */
 
-    // var newBookObject= [];
-    // createBook(newBookObject);
-    // showBookInfo(newBookObject);
-    //
-    // function createBook (a) {
-    //     alert("Please enter the name of 5 books including author name");
-    //
-    //     for (var i = 0; i <= 4; i++){
-    //         var bookName = prompt("Please enter the book name " + i+1);
-    //         var bookAuthor = prompt("Please enter book author first name " + i+1);
-    //         var bookAuthorLastname = prompt("Please enter book author last name " + i+1);
-    //
-    //         a[i] = {
-    //             title: "",
-    //             author: {
-    //                 firstName: "",
-    //                 lastName: ""
-    //             }
-    //         };
-    //         a[i].title = bookName;
-    //         a[i].author.firstname = bookAuthor;
-    //         a[i].author.lastname = bookAuthorLastname;
-    //     }
-    //
-    //     console.log("The new array is: ")
-    //     console.log(a);
-    //     console.log("");
-    // }
+    var newBookObject= [];
+    createBook(newBookObject);
+    showBookInfo(newBookObject);
+
+    function createBook (a) {
+        alert("Please enter the name of 5 books including author name");
+
+        for (var i = 0; i <= 4; i++){
+            var bookName = prompt("Please enter the book name " + i+1);
+            var bookAuthor = prompt("Please enter book author first name " + i+1);
+            var bookAuthorLastname = prompt("Please enter book author last name " + i+1);
+
+            a[i] = {
+                title: "",
+                author: {
+                    firstName: "",
+                    lastName: ""
+                }
+            };
+            a[i].title = bookName;
+            a[i].author.firstname = bookAuthor;
+            a[i].author.lastname = bookAuthorLastname;
+        }
+
+        console.log("The new array is: ")
+        console.log(a);
+        console.log("");
+    }
 
 
     function showBookInfo (input){
