@@ -9,6 +9,23 @@
 // Extra Challenge: account for invalid characters
 // Extra Challenge: if the input is already formatted, output the unformatted version
 // Extra Challenge: allow the parser to accept letters and convert them to the correct numbers
+
+
+var inputnumbers = prompt("Please enter a phone number all together: ");
+
+checknumber(inputnumbers);
+
+
+function checknumber(a) {
+         if (a.length < 10) {
+             console.log(a);
+         }
+}
+
+
+
+
+
 // BONUS 2:
 // Create a student roster management app. Using the user dialogue functions (alert, confirm, prompt), create an application that will prompt the user to choose from a menu with the following actions:
 //     1) Add a student name
