@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonus HTML</title>
+</head>
+<body>
+    <h1>The List Maker</h1>
+
+    <br>
+
+
+        <ol>
+            <li data-dbid="1">Item 1</li>
+            <li data-dbid="2">Item 2</li>
+            <li data-dbid="3">Item 3</li>
+            <li data-dbid="4">Item 4</li>
+            <li data-dbid="5">Item 5</li>
+        </ol>
+
+
+<script>
+    alert("Hello, here you will create a list and then display it in the page");
+
+    var listItems = document.getElementsByTagName("li");
+    console.log (listItems);
+
+        for (var i = 0; i < listItems.length; i += 1) {
+            var promptUser = prompt("Please add 5 entries to your list: ");
+            listItems[i].innerText = promptUser;
+                console.log(promptUser);
+        }
+
+</script>
+</body>
+</html>
+
+<!--DOM BONUS-->
+<!--Create a list maker that confirms with the user if they wish to add an entry to a list.-->
+<!--If the user confirms, after each new entry, prompt the user for additional-->
+<!--items and then add them to the HTML of the page. If the user confirms not to add another-->
+<!--item, end the cycle of user dialogue functions and apply styling to the page using JS only.-->
