@@ -7,6 +7,15 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+
+<br>
+
+<button id="button1">Click to change the main header</button>
+<button id="button2">Set the text color of subHeader to blue</button>
+<button id="button3">Set text color on every other list item to grey</button>
+<button id="button4">Set text color of li with dbid = 1 to blue</button>
+<button id="button5">Change the text in the first sub paragraph to "Mission Accomplished!"</button>
+
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -32,35 +41,49 @@
         var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "JavaScript is Cool";
+
+        document.getElementById('button1').addEventListener('click', function (){mainHeader.innerHTML = "JavaScript is Cool";}, false);
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        // subHeader.style.color = "blue";
+        document.getElementById('button2').addEventListener('click', function (){subHeader.style.color = "blue";}, false);
+
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
-        for (var i = 0; i < listItems.length; i += 2) {
+        document.getElementById('button3').addEventListener('click', function (){for (var i = 0; i < listItems.length; i += 2) {
             listItems[i].style.color = "grey";
-        }
+        }}, false);
 
-        for (var i = 0; i < listItems.length; i++) {
+        // TODO: Set text color of li with dbid = 1 to blue
+        // for (var i = 0; i < listItems.length; i += 2) {
+        //     listItems[i].style.color = "grey";
+        // }
+        document.getElementById('button4').addEventListener('click', function (){for (var i = 0; i < listItems.length; i++) {
             var dbId = listItems[i].getAttribute("data-dbid");
-                if (dbId === "1"){
-                    listItems[i].style.color = "blue";
-                }
-        }
+            if (dbId === "1"){
+                listItems[i].style.color = "blue";
+            }
+        }}, false);
+
+        // for (var i = 0; i < listItems.length; i++) {
+        //     var dbId = listItems[i].getAttribute("data-dbid");
+        //         if (dbId === "1"){
+        //             listItems[i].style.color = "blue";
+        //         }
+        // }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        document.getElementById('button5').addEventListener('click', function (){subParagraphs[0].innerText = "Mission Accomplished";}, false);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        var sub2 = subParagraphs[0];
-        sub2.innerText = "Mission Accomplished";
+        // subParagraphs[0].innerText = "Mission Accomplished";
 
     })();
 </script>
@@ -68,3 +91,7 @@
 </html>
 
 
+<!--Open the HTML file named dom-query-js.html that you created in the last lesson.-->
+<!--Add 4 buttons to the page. Attach click event listeners to each of the buttons and have the handlers perform the modifications that were automatically taking place. For example, the first button should set inner html of mainHeader to "JavaScript is Cool".-->
+<!--View the results in your browser to test for the expected output.-->
+<!--Finally, save your work, commit the changes to your git repository, and push to GitHub.-->
