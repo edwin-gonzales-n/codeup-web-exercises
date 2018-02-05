@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Map Lecture</title>
+    <style type="text/css">
+
+        #map {
+            width: 100%;
+            height: 700px;
+              }
+    </style>
+
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgfMlQyQnhee5ftdpFKrrmadp3ZmeYqew"></script>
+
+    <script type="text/javascript">
+
+        (function() {
+
+            "user strict";
+
+            var mapOptions = {
+                center: {
+                    lat: 29.426791,
+                    lng: -98.489602
+                    // 29.9773° N, 31.1325° E
+                    // lat: 29.9773,
+                    // lng: 31.1325
+                    },
+                zoom: 15,
+                mapTypeId: 'terrain'
+            }
+
+            var mapDisplay = document.getElementById("map");
+            var map = new google.maps.Map(mapDisplay, mapOptions);
+            mapDisplay.setTilt(45);
+
+        })();
+
+
+    </script>
+
+</body>
+</html>
+
+<!--AIzaSyCgfMlQyQnhee5ftdpFKrrmadp3ZmeYqew-->
