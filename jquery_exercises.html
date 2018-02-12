@@ -9,25 +9,54 @@
 </head>
 <body>
 
-<h1 id="tittle" class="myTitles"> This is my tittle</h1>
-<p id="firstParagraph" class="myParagraphs">This is my first paragraph</p>
+<h1 id="tittle" class="codeup"> This is my tittle</h1>
+<p id="firstParagraph" class="codeup">This is my first paragraph</p>
 <ul id="firstUl" class="myULs">
-    <li id="firstLi" class="myLIs">This is my first li</li>
+    <li id="firstLi" class="codeup">This is my first li</li>
 </ul>
 
-<div id="firstDiv" class="MyDivs">This is my first Div</div>
+<div id="firstDiv" class="myFirstDiv">This is my first Div</div>
 
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
 
-    $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
-    });
+    // $(document).ready(function() {
+    //     alert( 'The DOM has finished loading!' );
+    // });
+    //
+    // var contents = $('#firstParagraph').html();
+    // alert(contents);
+    //
+    // $(".codeup").css(
+    //    "border", "solid black", "1px"
+    // );
 
-    var contents = $('#firstParagraph').html();
-    alert(contents);
+    // Remove your custom jQuery code from previous exercises.
+    //
+    //     Using jQuery, set the font-size of all li elements to 20px.
+    //
+    //     Craft selectors that highlight all the h1, p, and li elements.
+    //
+    //     Create a jQuery statement to alert the contents of your h1 element(s).
+    //
+    //     Multiple Selectors
+    //
+    // Combine your selectors that highlight all the h1, p, and li elements.
+
+    $('li').css(
+        'font-size', '20px'
+    );
+
+    $('h1, p, li').css(
+        // 'color', 'blue',
+        'background-color', '#FF0',
+        'border', '1px solid black'
+    );
+
+    var content = $('h1').html();
+    alert(content);
 
 
 </script>
