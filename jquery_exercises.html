@@ -1,10 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Exercices</title>
 </head>
 <body>
-$END$
+
+<h1 id="tittle" class="myTitles"> This is my tittle</h1>
+<p id="firstParagraph" class="myParagraphs">This is my first paragraph</p>
+<ul id="firstUl" class="myULs">
+    <li id="firstLi" class="myLIs">This is my first li</li>
+</ul>
+
+<div id="firstDiv" class="MyDivs">This is my first Div</div>
+
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        alert( 'The DOM has finished loading!' );
+    });
+
+    var contents = $('#firstParagraph').html();
+    alert(contents);
+
+
+</script>
 </body>
 </html>
