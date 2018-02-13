@@ -11,16 +11,30 @@
 
 <h1 id="tittle" class="codeup"> This is my tittle</h1>
 <p id="firstParagraph" class="codeup">This is my first paragraph</p>
+<p id="secondParagraph" class="codeup">This is my second paragraph</p>
+<p id="thirdParagraph" class="codeup">This is my third paragraph</p>
 <ul id="firstUl" class="myULs">
     <li id="firstLi" class="codeup">This is my first li</li>
 </ul>
 
 <div id="firstDiv" class="myFirstDiv">This is my first Div</div>
 
+<form action="">
+    <div>
+        <input id="username" type="text">
+        <label for="username">username</label>
+        <button type="button">Submit</button>
+    </div>
+</form>
+
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
+
+    // var username = $("#username").html.val();
+    // var value = username.addEventListener(function());
+    // console.log(value);
 
     // $(document).ready(function() {
     //     alert( 'The DOM has finished loading!' );
@@ -45,18 +59,50 @@
     //
     // Combine your selectors that highlight all the h1, p, and li elements.
 
-    $('li').css(
-        'font-size', '20px'
+    // $('li').css(
+    //     'font-size', '20px'
+    // );
+    //
+    // $('h1, p, li').css(
+    //     // 'color', 'blue',
+    //     'background-color', '#FF0',
+    //     'border', '1px solid black'
+    // );
+    //
+    // var content = $('h1').html();
+    // alert(content);
+    // Remove your custom jQuery code from previous exercises.
+    //
+    //     Add jQuery code that will change the background color of a h1 element when clicked.
+    //
+    //     Make all paragraphs have a font size of 18px when they are double clicked.
+    //
+    //     Set all li text color to red when the mouse is hovering, reset to black when it is not.
+
+
+    $("h1").click(function () {
+        // $('h1').css({'background-color': 'black', 'color': 'white'});
+        $(event.target).css({'background-color': 'black', 'color': 'white'});
+    });
+
+    $('p').dblclick(function (){
+       $('p').css('font-size', '20px');
+    });
+
+    $('li').hover(
+        function() {
+            $('li').css('background-color', 'red');
+        },
+        function() {
+            $(this).css('background-color', 'white');
+        }
     );
 
-    $('h1, p, li').css(
-        // 'color', 'blue',
-        'background-color', '#FF0',
-        'border', '1px solid black'
-    );
 
-    var content = $('h1').html();
-    alert(content);
+
+
+
+
 
 
 </script>

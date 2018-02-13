@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        .particule {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1rem;
+            height: 1rem;
+            margin: -.5rem 0 0 -.5rem;
+            border: 1px solid currentColor;
+            transform: scale(0);
+        }
+    </style>
+    <title>Konami</title>
+</head>
+<body>
+
+<h1 style="color: black; text-align: center">Konami Code</h1>
+
+
+<!--Script-->
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        "use strict";
+
+        var keyInput = [];
+
+        $(document).keyup(function(e){
+            var key = e.which || e.keyCode;
+
+            keyInput.push(key);
+            console.log(keyInput);
+
+            var newKeyInput = keyInput.toString();
+            var konamiCode = "38,38,40,40,37,39,37,39,66,65,13";
+
+            if (newKeyInput === konamiCode){
+                alert("You have added 30 extra lives!!");
+            }
+        });
+    </script>
+</body>
+</html>
