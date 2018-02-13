@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .container {
+            /*display: grid;*/
+            /*grid-template-columns: 50px;*/
+            /*grid-template-columns: 50px;*/
+            width: 100%;
+        }
+
+        @import url(http://fonts.googleapis.com/css?family=Lato:400,900);  /* <-- Just for the demo, Yes I like pretty fonts... */
+
+        .square {
+            float:left;
+            position: relative;
+            width: 25%;
+            padding-bottom : 25%; /* = width for a 1:1 aspect ratio */
+            margin:1%;
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+        }
+
+        .img_1-1{background: #4d90fe}
+        .img_1-2{background: #4d90fe}
+        .img_1-3{background: #4d90fe}
+
+        .img_2-1{background: #4d90fe}
+        .img_2-2{background: #4d90fe}
+        .img_2-3{background: #4d90fe}
+
+        .img_3-1{background: #4d90fe}
+        .img_3-2{background: #4d90fe}
+        .img_3-3{background: #4d90fe}
+
+
+
+        /*  following just for the demo */
+
+
+        body {
+            font-size:20px;
+            font-family: 'Lato',verdana, sans-serif;
+            color: #fff;
+            text-align:center;
+            background:#ECECEC;
+        }
+
+        #bottom {
+            clear:both;
+            margin:0 1.66%;
+            width:89.68%;
+            padding: 3.5%;
+            background-color:#1E1E1E;
+            color: #fff;
+        }
+        #bottom p{
+            text-align:center;
+            line-height:2em;
+        }
+        #bottom a{
+            color: #000;
+            text-decoration:none;
+            border:1px solid #000;
+            padding:10px 20px 12px;
+            line-height:70px;
+            background:#ccc;
+
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        #bottom a:hover{
+            background:#ECECEC;
+            border:1px solid #fff;
+        }
+    </style>
+
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+
+    <main>
+        <div>
+            <button type="button">START THE GAME!</button>
+        </div>
+        <div class="row container-fluid">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                    <!-- 1st row verticaly centered text in the square columns -->
+
+            <div class="square img_1-1">
+            </div>
+            <div class="square img_1-2">
+            </div>
+            <div class="square img_1-3">
+            </div>
+
+            <!-- 2nd row verticaly centered images in square columns -->
+
+            <div class="square img_2-1">
+            </div>
+            <div class="square img_2-2">
+            </div>
+            <div class="square img_2-3">
+            </div>
+
+            <!-- 3rd row responsive images in background with centered content -->
+
+            <div class="square img_3-1">
+            </div>
+            <div class="square img_3-2">
+            </div>
+            <div class="square img_3-3">
+            </div>
+        <!-- END OF LAYOUT, following juts for the demo -->
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div>
+            <button type="reset" style="text-align: center; color: black;">Try Again</button>
+        </div>
+    </main>
+
+
+<script src="js/jquery-2.2.4.js"></script>
+
+    <script>
+        "use strict";
+
+        var win1 = ['square1','square4','square7']
+
+
+        $('.img_1-1').hover(
+            function() {
+                $('.img_1-1').css('background-color', 'red');
+            },
+            function() {
+                $(this).css('background-color', '#4d90fe');
+            }
+        );
+        var square1_X = $(".img_1-1").click(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://www.drodd.com/images15/letter-x12.png)',
+                'background-size': '100%'
+                });
+            win1.pop();
+            checkArrayWin1();
+        });
+
+        var square1_XX = $(".img_1-1").dblclick(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://vignette2.wikia.nocookie.net/creepypasta/images/5/58/Perfectcircle.gif/revision/latest?cb=20120322034055)',
+                'background-size': '100%'
+            });
+        });
+
+        $('.img_1-2').hover(
+            function() {
+                $('.img_1-2').css('background-color', 'red');
+            },
+            function() {
+                $(this).css('background-color', '#4d90fe');
+            }
+        );
+        var sqaure2_X = $(".img_1-2").click(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://www.drodd.com/images15/letter-x12.png)',
+                'background-size': '100%'
+            });
+        });
+
+        var square2_XX = $(".img_1-2").dblclick(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://vignette2.wikia.nocookie.net/creepypasta/images/5/58/Perfectcircle.gif/revision/latest?cb=20120322034055)',
+                'background-size': '100%'
+            });
+        });
+
+        $('.img_1-3').hover(
+            function() {
+                $('.img_1-3').css('background-color', 'red');
+            },
+            function() {
+                $(this).css('background-color', '#4d90fe');
+            }
+        );
+        var square3_X = $(".img_1-3").click(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://www.drodd.com/images15/letter-x12.png)',
+                'background-size': '100%'
+            });
+        });
+
+        var square3_XX = $(".img_1-3").dblclick(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://vignette2.wikia.nocookie.net/creepypasta/images/5/58/Perfectcircle.gif/revision/latest?cb=20120322034055)',
+                'background-size': '100%'
+            });
+        });
+
+        $('.img_2-1').hover(
+            function() {
+                $('.img_2-1').css('background-color', 'red');
+            },
+            function() {
+                $(this).css('background-color', '#4d90fe');
+            }
+        );
+        var square4_X = $(".img_2-1").click(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://www.drodd.com/images15/letter-x12.png)',
+                'background-size': '100%'
+            });
+            win1.pop();
+            checkArrayWin1();
+        });
+
+        var square4_XX = $(".img_2-1").dblclick(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://vignette2.wikia.nocookie.net/creepypasta/images/5/58/Perfectcircle.gif/revision/latest?cb=20120322034055)',
+                'background-size': '100%'
+            });
+        });
+        $('.img_2-2').hover(
+            function() {
+                $('.img_2-2').css('background-color', 'red');
+            },
+            function() {
+                $(this).css('background-color', '#4d90fe');
+            }
+        );
+        var square5_X = $(".img_2-2").click(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://www.drodd.com/images15/letter-x12.png)',
+                'background-size': '100%'
+            });
+        });
+
+        var square5_XX = $(".img_2-2").dblclick(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://vignette2.wikia.nocookie.net/creepypasta/images/5/58/Perfectcircle.gif/revision/latest?cb=20120322034055)',
+                'background-size': '100%'
+            });
+        });
+        $('.img_2-3').hover(
+            function() {
+                $('.img_2-3').css('background-color', 'red');
+            },
+            function() {
+                $(this).css('background-color', '#4d90fe');
+            }
+        );
+        var square6_X = $(".img_2-3").click(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://www.drodd.com/images15/letter-x12.png)',
+                'background-size': '100%'
+            });
+        });
+
+        var square6_XX = $(".img_2-3").dblclick(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://vignette2.wikia.nocookie.net/creepypasta/images/5/58/Perfectcircle.gif/revision/latest?cb=20120322034055)',
+                'background-size': '100%'
+            });
+        });
+        $('.img_3-1').hover(
+            function() {
+                $('.img_3-1').css('background-color', 'red');
+            },
+            function() {
+                $(this).css('background-color', '#4d90fe');
+            }
+        );
+        var square7_X = $(".img_3-1").click(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://www.drodd.com/images15/letter-x12.png)',
+                'background-size': '100%'
+            });
+            win1.pop();
+            checkArrayWin1();
+        });
+
+        var square7_XX = $(".img_3-1").dblclick(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://vignette2.wikia.nocookie.net/creepypasta/images/5/58/Perfectcircle.gif/revision/latest?cb=20120322034055)',
+                'background-size': '100%'
+            });
+        });
+        $('.img_3-2').hover(
+            function() {
+                $('.img_3-2').css('background-color', 'red');
+            },
+            function() {
+                $(this).css('background-color', '#4d90fe');
+            }
+        );
+        var square8_X = $(".img_3-2").click(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://www.drodd.com/images15/letter-x12.png)',
+                'background-size': '100%'
+            });
+        });
+
+        var square8_XX = $(".img_3-2").dblclick(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://vignette2.wikia.nocookie.net/creepypasta/images/5/58/Perfectcircle.gif/revision/latest?cb=20120322034055)',
+                'background-size': '100%'
+            });
+        });
+        $('.img_3-3').hover(
+            function() {
+                $('.img_3-3').css('background-color', 'red');
+            },
+            function() {
+                $(this).css('background-color', '#4d90fe');
+            }
+        );
+        var square9_X = $(".img_3-3").click(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://www.drodd.com/images15/letter-x12.png)',
+                'background-size': '100%'
+            });
+        });
+
+        var square9_XX = $(".img_3-3").dblclick(function () {
+            $(event.target).css({
+                'background-color': 'black',
+                'color': 'white',
+                'background-image': 'url(http://vignette2.wikia.nocookie.net/creepypasta/images/5/58/Perfectcircle.gif/revision/latest?cb=20120322034055)',
+                'background-size': '100%'
+            });
+        });
+
+        function checkArrayWin1() {
+            if (win1.length == 0){
+                setTimeout(function(){ alert("You Won!"); }, 300);
+                // alert("YOU WON!");
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

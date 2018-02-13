@@ -18,8 +18,9 @@
             transform: scale(0);
         }
 
+
     </style>
-    <title>Konami</title>
+    <title class="particule">Konami</title>
 </head>
 <body>
 
@@ -35,7 +36,7 @@
         var keyInput = [];
 
         $(document).keyup(function(e){
-            var key = e.which || e.keyCode;
+            var key = e.keyCode;
 
             keyInput.push(key);
             console.log(keyInput);
@@ -51,7 +52,7 @@
 
         //  ANIME
         function animation () {
-            var maxElements = 250;
+            var maxElements = 1250;
             var duration = 1500;
             var toAnimate = [];
             var radius = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
