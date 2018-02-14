@@ -20,39 +20,40 @@
             display: block;
         }
     </style>
+
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
     <title>jquery_faq</title>
 </head>
+
+<!-- BODY STARTS -->
 <body>
+    <div class="alert alert-success" role="alert" id="alert1">Your page has loaded successfully</div>
     <div id="iamtheDiv">
         <h1>Would you like to sing up for our newsletter?</h1><span id="hideDiv">x</span>
     </div>
-    <h2 id="h2fadein">Would you like to register with us?</h2>        
-
-<!--<h1>National Parks FAQ</h1>-->
-
-<!--<dl>-->
-    <!--<dt>Questions 1</dt>-->
-    <!--<dd class="invisible">- black hot drink</dd>-->
-    <!--<dt>Question 2</dt>-->
-    <!--<dd class="invisible">- white cold drink</dd>-->
-    <!--<dt>Question 3</dt>-->
-    <!--<dd class="invisible">- white cold drink</dd>-->
-    <!--<dt>Question 4</dt>-->
-    <!--<dd class="invisible">- white cold drink</dd>-->
-    <!--<dt>Question 5</dt>-->
-    <!--<dd class="invisible">- white cold drink</dd>-->
-    <!--<dt>Question 6</dt>-->
-    <!--<dd class="invisible">- white cold drink</dd>-->
-    <!--<dt>Question 7</dt>-->
-    <!--<dd class="invisible">- white cold drink</dd>-->
-    <!--<dt>Question 8</dt>-->
-    <!--<dd class="invisible">- white cold drink</dd>-->
-    <!--<dt>Question 9</dt>-->
-    <!--<dd class="invisible">- white cold drink</dd>-->
-    <!--<dt>Question 10</dt>-->
-    <!--<dd class="invisible">- white cold drink</dd>-->
-<!--</dl>-->
-    <!--<br>-->
+        
+    <div class="modal mymodal" tabindex="-1" role="dialog" id="modalonyourface">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">This Message Up on Yo Face!</h4>
+                </div>
+                <div class="modal-body">
+                        <h2 id="h2fadein" class="modal-dialog">Would you like to register with us?</h2> 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="modaldismiss">close</button>
+                    <button type="button" class="btn btn-primary" id="yesregister">YES</button>
+                </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <h3 id="national-parks-1" class="headings">National Parks</h3>
     <ul id="national-parks" class="losULs">
@@ -79,25 +80,58 @@
         <li>Mulato</li>
     </ul>
 
-
-
     <!--<a href="#" id="showAnswers">Click here to show answers</a>-->
     <button id="lastli">click to make the last li in each ul turn yellow background.</button>
     <!--<button>Toggle Anwswers</button>-->
 
 
 <script src="js/jquery-2.2.4.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script>
     "use strict";
 
     $(document).ready(function() {
-        $('#h2fadein').hide();
+
+        $('h3').next().hide();
+
+        $('#modalonyourface').on('shown.bs.modal', function(){
+            $('#h2fadein').focus()
+        });
+
+        setTimeout(function(){
+            $('#alert1').fadeOut();
+        },2000);
+
+        // $('#h2fadein').hide();
+        $('#modalonyourface').hide();
+
         setTimeout(function()
         {
-            $('#h2fadein').fadeIn();
+            $('#h2fadein').fadeIn().css('color','#189ad3');
         }
-        ,8000);
+        ,2000);
+        
+        
+        setTimeout(function()
+        {
+            $('.mymodal').fadeIn().css('color','#189ad3');
+        }
+        ,2000);
+
+        $('#modaldismiss').click(function(){
+            $('.mymodal').hide();
+        });
+        $('.close').click(function(){
+            $('.mymodal').hide();
+        });
+        $('#yesregister').click(function(){
+            window.open('http://global.uci.edu/event-page/mock-registration-page.php');
+        });
+
+
+
     });
         // Create a button that, when clicked, makes the last li in each ul have a yellow background.
     $('#lastli').click(function () {
