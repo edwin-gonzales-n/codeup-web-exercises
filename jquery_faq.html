@@ -23,6 +23,10 @@
     <title>jquery_faq</title>
 </head>
 <body>
+    <div id="iamtheDiv">
+        <h1>Would you like to sing up for our newsletter?</h1><span id="hideDiv">x</span>
+    </div>
+    <h2 id="h2fadein">Would you like to register with us?</h2>        
 
 <!--<h1>National Parks FAQ</h1>-->
 
@@ -50,7 +54,7 @@
 <!--</dl>-->
     <!--<br>-->
 
-    <h3 id="national-parks-heading" class="headings">National Parks</h3>
+    <h3 id="national-parks-1" class="headings">National Parks</h3>
     <ul id="national-parks" class="losULs">
         <li>Arches</li>
         <li>Badlands</li>
@@ -58,7 +62,7 @@
         <li>Denali</li>
         <li>Everglades</li>
     </ul>
-    <h3 class="headings" class="headings">State Parks of Texas</h3>
+    <h3 id="national-parks-2" class="headings">State Parks of Texas</h3>
     <ul id="state-parks-texas" class="losULs">
         <li>Abilene</li>
         <li>Big Bend</li>
@@ -66,8 +70,8 @@
         <li>Davis Mountains</li>
         <li>Enchanted Rock</li>
     </ul>
-    <h3 class="headings" class="headings">State Parks of Miami</h3>
-    <ul id="state-parks-Miami" class="losULs">
+    <h3 id="national-parks-3" class="headings">State Parks of Miami</h3>
+    <ul id="state-parks-miami" class="losULs">
         <li>Acere</li>
         <li>Consorte</li>
         <li>Que</li>
@@ -85,74 +89,46 @@
 <script src="js/jquery-2.2.4.js"></script>
 
 <script>
-    // Open the file named jquery_faq.html for editing. Commit all changes to GitHub.
-    //
-    //     Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.
-    //
-    //     Create a button that, when clicked, makes the last li in each ul have a yellow background.
-    //
-    //     When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-    //
-    //     When any list item is clicked, first li of the parent ul should have a font color of blue.
-    //
-    //     Bonus
-    // Create 3 divs that each look like a picture Frame; each one should have a unique background image and a button underneath that swaps the image from the frame. Use Traversing functions of jQuery to accomplish this.
-    //
-    //     The rules are the following:
-    //
-    //     The left frame swaps to the right and takes the image from the frame in the center.
-    //     The center frame swaps randomly to either the left or right.
-    //     The right frame swaps to the left and takes the image from the frame in the center.
+    "use strict";
 
-    // Create a button that, when clicked, makes the last li in each ul have a yellow background.
-    // .last()
-    // Reduce the set of matched elements to the final one in the set.
-    //
-    //     The opposite of .first(), .last() matches the last element in a collection.
-    //
-    //     To highlight the last list item in our example list, we could use .last():
-
-
-    // $('li').last().css('background-color', '#FF0');
-
-    $(document).ready(function() {});
-
-
+    $(document).ready(function() {
+        $('#h2fadein').hide();
+        setTimeout(function()
+        {
+            $('#h2fadein').fadeIn();
+        }
+        ,8000);
+    });
         // Create a button that, when clicked, makes the last li in each ul have a yellow background.
-        $('#lastli').click(function () {
-            $('ul').each(function(index,element){
-                $(element).children().last().toggleClass('highlight');
-            });
+    $('#lastli').click(function () {
+        $('ul').each(function(index,element){
+            $(element).children().last().toggleClass('highlight');
         });
+    });
         
         //When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this. 
-        $('h3').click(function(){
-            $(this).next().children().css('font-weight', 'bold');
-        });
+        // $('h3').click(function(){
+        //     $(this).next().children().css('font-weight', 'bold');
+        // });
 
         // When any list item is clicked, first li of the parent ul should have a font color of blue.
         $('li').click(function(){
             $(this).parent().children().first().css('color', 'blue');
         })        
-    
 
-    //When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    $('#hideDiv').click(function(){
+        $("#iamtheDiv").hide();
+    });
+    $('#national-parks-1').click(function(){
+        $('#national-parks').slideToggle();
+    });
+    $('#national-parks-2').click(function(){
+        $('#state-parks-texas').slideToggle();
+    }); 
+    $('#national-parks-3').click(function(){
+        $('#state-parks-miami').slideToggle();
+    });
 
-    // $('h3').last().css('background-color', '#FF0');
-
-
-    // first exercise
-    // $(document).ready(function() {
-    //
-    //     $('button').click(function(){
-    //        $('dd').toggleClass('invisible');
-    //     });
-    //
-    //     $('dt').click(function(){
-    //         $(this).css('background', 'yellow');
-    //     });
-    // });
 </script>
-
 </body>
 </html>
