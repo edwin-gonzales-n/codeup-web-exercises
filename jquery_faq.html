@@ -8,80 +8,150 @@
     <style>
         .invisible{
             display: none;
-
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        dt {
+            text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: block;
         }
     </style>
     <title>jquery_faq</title>
 </head>
 <body>
 
-<h1>National Parks FAQ</h1>
+<!--<h1>National Parks FAQ</h1>-->
 
-<dl>
-    <dt>Questions 1</dt>
-    <dd class="invisible">- black hot drink</dd>
-    <dt>Question 2</dt>
-    <dd class="invisible">- white cold drink</dd>
-    <dt>Question 3</dt>
-    <dd class="invisible">- white cold drink</dd>
-    <dt>Question 4</dt>
-    <dd class="invisible">- white cold drink</dd>
-    <dt>Question 5</dt>
-    <dd class="invisible">- white cold drink</dd>
-    <dt>Question 6</dt>
-    <dd class="invisible">- white cold drink</dd>
-    <dt>Question 7</dt>
-    <dd class="invisible">- white cold drink</dd>
-    <dt>Question 8</dt>
-    <dd class="invisible">- white cold drink</dd>
-    <dt>Question 9</dt>
-    <dd class="invisible">- white cold drink</dd>
-    <dt>Question 10</dt>
-    <dd class="invisible">- white cold drink</dd>
-    <br>
+<!--<dl>-->
+    <!--<dt>Questions 1</dt>-->
+    <!--<dd class="invisible">- black hot drink</dd>-->
+    <!--<dt>Question 2</dt>-->
+    <!--<dd class="invisible">- white cold drink</dd>-->
+    <!--<dt>Question 3</dt>-->
+    <!--<dd class="invisible">- white cold drink</dd>-->
+    <!--<dt>Question 4</dt>-->
+    <!--<dd class="invisible">- white cold drink</dd>-->
+    <!--<dt>Question 5</dt>-->
+    <!--<dd class="invisible">- white cold drink</dd>-->
+    <!--<dt>Question 6</dt>-->
+    <!--<dd class="invisible">- white cold drink</dd>-->
+    <!--<dt>Question 7</dt>-->
+    <!--<dd class="invisible">- white cold drink</dd>-->
+    <!--<dt>Question 8</dt>-->
+    <!--<dd class="invisible">- white cold drink</dd>-->
+    <!--<dt>Question 9</dt>-->
+    <!--<dd class="invisible">- white cold drink</dd>-->
+    <!--<dt>Question 10</dt>-->
+    <!--<dd class="invisible">- white cold drink</dd>-->
+<!--</dl>-->
+    <!--<br>-->
+
+    <h3 id="national-parks-heading" class="headings">National Parks</h3>
+    <ul id="national-parks" class="losULs">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3 class="headings" class="headings">State Parks of Texas</h3>
+    <ul id="state-parks-texas" class="losULs">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+    <h3 class="headings" class="headings">State Parks of Miami</h3>
+    <ul id="state-parks-Miami" class="losULs">
+        <li>Acere</li>
+        <li>Consorte</li>
+        <li>Que</li>
+        <li>Bola</li>
+        <li>Mulato</li>
+    </ul>
+
+
+
     <!--<a href="#" id="showAnswers">Click here to show answers</a>-->
-    <button>Toggle Anwswers</button>
+    <button id="lastli">click to make the last li in each ul turn yellow background.</button>
+    <!--<button>Toggle Anwswers</button>-->
 
-</dl>
 
 <script src="js/jquery-2.2.4.js"></script>
 
 <script>
-    // Create a new file named jquery_faq.html. Commit all changes to GitHub.
+    // Open the file named jquery_faq.html for editing. Commit all changes to GitHub.
     //
-    //     In a HTML structure, create a definition list containing 10 FAQs about national parks.
+    //     Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.
     //
-    //     Add a class to all dd elements named invisible.
+    //     Create a button that, when clicked, makes the last li in each ul have a yellow background.
     //
-    //     Create CSS that sets elements with the invisible class to display: none.
+    //     When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
     //
-    //     Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
+    //     When any list item is clicked, first li of the parent ul should have a font color of blue.
     //
     //     Bonus
+    // Create 3 divs that each look like a picture Frame; each one should have a unique background image and a button underneath that swaps the image from the frame. Use Traversing functions of jQuery to accomplish this.
     //
-    // When any one dt is clicked, the element that was clicked should be highlighted.
+    //     The rules are the following:
+    //
+    //     The left frame swaps to the right and takes the image from the frame in the center.
+    //     The center frame swaps randomly to either the left or right.
+    //     The right frame swaps to the left and takes the image from the frame in the center.
 
-    // $(a).click(function() {
-    //    $('.invisible').css(
-    //        'display', 'unset'
-    //    );
+    // Create a button that, when clicked, makes the last li in each ul have a yellow background.
+    // .last()
+    // Reduce the set of matched elements to the final one in the set.
+    //
+    //     The opposite of .first(), .last() matches the last element in a collection.
+    //
+    //     To highlight the last list item in our example list, we could use .last():
+
+
+    // $('li').last().css('background-color', '#FF0');
+
+    $(document).ready(function() {});
+
+
+        // Create a button that, when clicked, makes the last li in each ul have a yellow background.
+        $('#lastli').click(function () {
+            $('ul').each(function(index,element){
+                $(element).children().last().toggleClass('highlight');
+            });
+        });
+        
+        //When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this. 
+        $('h3').click(function(){
+            $(this).next().children().css('font-weight', 'bold');
+        });
+
+        // When any list item is clicked, first li of the parent ul should have a font color of blue.
+        $('li').click(function(){
+            $(this).parent().children().first().css('color', 'blue');
+        })        
+    
+
+    //When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+
+    // $('h3').last().css('background-color', '#FF0');
+
+
+    // first exercise
+    // $(document).ready(function() {
+    //
+    //     $('button').click(function(){
+    //        $('dd').toggleClass('invisible');
+    //     });
+    //
+    //     $('dt').click(function(){
+    //         $(this).css('background', 'yellow');
+    //     });
     // });
-
-    $(document).ready(function() {
-
-        $('button').click(function(){
-           $('dd').toggleClass('invisible');
-        });
-
-        $('dt').click(function(){
-            $(this).css('background', 'yellow');
-        });
-    });
-
-
-
-
-
 </script>
 
 </body>
