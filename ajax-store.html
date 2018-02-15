@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <style>
+        /* body {
+            background-color:rgb(11, 208, 235);
+        }
+        table {
+            background-color:aqua;
+        } */
+        
+    </style>
+        
+    <title>Online Store</title>
+</head>
+<body style="text-align:center" class="container">
+        <!-- Ajax Store
+        Download and save ajax-store.html.
+        Create a data directory and download inventory.json to that folder.
+        Your online tool store should load data from the JSON file using a get request and append the data to the table. You will need to use either $.ajax() or $.get(), and a .done() callback.
+        Add some new entries to inventory.json and see how the data on the page gets updated.
+        Add a "Refresh" button that will load inventory.json for you without having to refresh the entire page.
+        Add Twitter Bootstrap to your online store with some custom CSS to make the style your own. -->
+
+<h1>My Tool Store</h1>
+
+<table id="products" class="table-responsive table container">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<br>
+<button id="pinchebutton">Refresh</button>
+
+<script src="js/jquery-2.2.4.js"></script>
+
+<script>
+(function() {
+    "use strict";
+    loadPage();
+    function loadPage(){
+        $.ajax({
+        type: "GET",
+        url: "http://localhost:63342/codeup-web-exercises/data/inventory.json",
+        // url: "http://192.168.1.214:3000/api/people",
+        success: function(items) {
+            // console.log('success',items);
+            $.each(items, function(i,item){
+                $('#insertProducts').append('<tr>'); 
+                $('#insertProducts').append('<td>'+item.title+'</td>');
+                $('#insertProducts').append('<td>' +item.quantity+'</td>');
+                $('#insertProducts').append('<td>' +item.price+'</td>');
+                $('#insertProducts').append('<td>' +item.categories+'</td>');
+                $('#insertProducts').append('</tr>');
+                });
+            },
+            error: function(){
+                alert('error loading orders!');
+            }
+        }).done(function(data){
+            $('table').css({
+                'background-color': 'aqua',
+                'margin': '0',
+                'font-family': 'arial'
+            });
+            $('body').css(
+                'background-color', 'rgb(11, 208, 235)'
+            );
+
+        });
+    }
+    
+    $('button').click(function(){
+        $("#insertProducts").empty();
+        loadPage();
+    });
+
+})();
+</script>
+</body>
+</html>
