@@ -104,19 +104,16 @@
         $('#searchButton').click(function(){
             $( "#userInput" ).keyup(function() {
                     var value = $( this ).val();
-                    console.log(value);
+                    // console.log(value);
                     // $("article:contains(value)").css("background-color", "yellow");
                     // console.log($("article:contains(Lorem)"));
 
                 $("article:contains(value)").each( function( i, element ) {
                     var content = $(element).text();
+                    console.log(content);
                     content = content.replace( value +'<span class="search-found">' + value + '</span>' );
                     element.html( content ).css("background-color","yellow");
                 });
-
-            // .search-found {
-            //         text-decoration: underline;
-            //     }
 
                 })
                 .keyup();

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+
+<script>
+
+//    generatePyramid();
+//
+//    function generatePyramid() {
+//        var totalNumberofRows = 5;
+//        var output="";
+//        for (var i = 1; i <= totalNumberofRows; i++) {
+//            for (var j = 1; j <= i; j++) {
+//                output+=j + "     ";
+//            }
+//            console.log(output);
+//            output="";
+//        }
+//    }
+//    for (var i = 1; i <= 999; i++) {
+//        var PHi = (Math.pow(((1 + Math.sqrt(5))/2),i));
+//        var phi = (Math.pow(((1 - Math.sqrt(5))/2),i));
+//        var fibo = Math.round((PHi - phi)/Math.sqrt(5));
+//
+//        if (fibo < 1000) {
+//            console.log(fibo);
+//        } else {
+//            break;
+//        }
+//    }
+
+    // var number = 13;
+
+    // doubleTheDifference(number);
+
+    // function doubleTheDifference(input) {
+    //     var doubleDifference = parseFloat(input);
+    //     if (doubleDifference < 13) {
+    //         return doubleDifference;
+    //     } else if (doubleDifference > 13) {
+    //         return console.log(((doubleDifference - 13) * 2));
+    //     } else return false;
+    // }
+
+    // var city = "Las Vegas";
+
+    // returnCity(city);
+    //
+    // function returnCity(input) {
+    //     var san = "san";
+    //     var newString = "new";
+    //     var string = input.toLowerCase();
+    //     if (string.includes(san) || string.includes(newString)){
+    //         return console.log(string);
+    //     } else return false;
+    // }
+
+    // rangeBetwee(3,7);
+
+    function rangeBetwee(start, end)
+    {
+
+        if (start > end) {
+            var arr = new Array(start - end + 1);
+            for (var i = 0; i < arr.length; i++, start--) {
+                resarrult[i] = start;
+            }
+            return arr;
+        }
+        else
+        {
+            var arro = new Array(end-start+1);
+
+            for (var j = 0; j < arro.length; j++, start++)
+            {
+                arro[j] = start;
+            }
+            return arro;
+        }
+    }
+
+
+// console.log(rangeBetwee(-10, -6));
+// console.log(rangeBetwee(-3, 3));
+
+//
+// escapeChar("it's time for BBQ");
+
+    function escapeChar(input) {
+        var specials=/[*|\":<>[\]{}`\\()';@&$]/;
+        var divider = "&amp";
+        var stringArray = input.split(' ');
+        console.log(stringArray);
+
+        if (specials.test(input)) {
+
+            return console.log(stringArray[0] + " " + divider + "; " + stringArray[2]);
+        }
+            else return false;
+    }
+
+function high(x)
+{
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var wordScores = [];
+    var highScore = 0;
+    var stringOut = "";
+    x = x.toLowerCase();
+    var xArray = x.split(" ");
+    console.log (xArray);
+
+    for (var wordLoop = 0; wordLoop < xArray.length; wordLoop ++)
+    {
+        wordScores[wordLoop]=0;
+        for (var lettersLoop = 0; lettersLoop < xArray[wordLoop].length; lettersLoop++)
+        {
+            console.log (xArray[wordLoop][lettersLoop]);
+            if(alphabet.indexOf(xArray[wordLoop][lettersLoop])!==-1)
+                wordScores[wordLoop]+= alphabet.indexOf(xArray[wordLoop][lettersLoop])+1;
+        }
+        console.log (wordScores);
+    }
+
+    for (var loop = 0; loop < xArray.length; loop ++)
+        if (wordScores[loop]>highScore)
+        {
+            highScore = wordScores[loop];
+            stringOut = xArray[loop];
+        }
+
+    return stringOut;
+}
+
+console.log(high('the zebra was unidentified'));
+// high('what time are we climbing up the volcano');
+
+</script>
+</html>

@@ -42,12 +42,6 @@ for (var x = 1; x <= 100; ++x) {
 //
 
 for (var i = 1; i <= 999; i++) {
-    // // fibonacci :
-    // // an = [ Phi^n - (phi)^n ]/Sqrt[5].
-    // //
-    // // where Phi=(1+Sqrt[5])/2 is the so-called golden mean, and phi=(1-Sqrt[5])/2
-    //
-    // i = ((Math.pow(((1 + Math.sqrt(5))/2), i)) - (Math.pow(((1 - Math.sqrt(5))/2),i)))/Math.sqrt(5);
     var PHi = (Math.pow(((1 + Math.sqrt(5))/2),i));
     var phi = (Math.pow(((1 - Math.sqrt(5))/2),i));
     var fibo = Math.round((PHi - phi)/Math.sqrt(5));
