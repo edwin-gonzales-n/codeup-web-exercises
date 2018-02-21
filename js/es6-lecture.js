@@ -35,9 +35,9 @@ console.log(users);
 // to the languages array
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-var name = 'Edwin O Gonzales';
-var email = 'edwin.gonzales.n@gmail.com';
-var languages = ['javascript', 'shell', 'java','html','css'];
+const name = 'Edwin O Gonzales';
+const email = 'edwin.gonzales.n@gmail.com';
+const languages = ['javascript', 'shell', 'java','html','css'];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
@@ -51,20 +51,19 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(user => {return emails.push(user.email)});
+users.forEach(user => {return emails.push(user.email)});  // return is redundant here since the push function is causing a direct effect. As saving a file, pushing a value to html, something that has a direct effect and direction to the page.
 
-users.forEach(user => {return names.push(user.name)});
+users.forEach(user => {names.push(user.name)}); // this is the same as the function above.
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
 
-users.forEach(function(user) {
-    // TODO: rewrite the code below to use object destructuring assignment
+users.forEach(({name, email, languages}) => {
 
-    const {name, email, languages} = user;
-
-// TODO: rewrite the assignment below to use template strings
-    developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(','));
+    //users.forEach(function(user) {
+    //const {name, email, languages} = user;  // this would be the same thing as putting (function({name,email,languages})
+//     developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(','));
+    developers.push('${name}'s email is ${email}, and ${name} knows ${languages.join(', ')}');
 
 // TODO: Use `let` for the following variable
     let list = '<ul>';
